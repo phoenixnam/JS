@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+
+<body>
+    <style>
+        .menu {
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        .btn {
+            margin-left: 300px;
+
+        }
+
+        .result {
+            color: blue;
+            font-weight: 300;
+        }
+    </style>
+    <h1>MENU</h1>
+    <div class="menu">
+        <div class="select">
+            Nước uống:
+            <select id="nuoc">
+                <option value="0">NƯỚC SUỐI</option>
+                <option value="1">COCA COLA</option>
+                <option value="2">7 UP</option>
+                <option value="3">PEPSI</option>
+                <option value="4">CAM ÉP</option>
+                <option value="5">STING</option>
+                <option value="6">BÒ HÚC</option>
+            </select>
+            Số lượng:
+            <input type="number" id="sln">
+        </div>
+        <br>
+        <div>
+            Trái cây:
+            <select id="tc">
+                <option value="0">Trái cây nhỏ</option>
+                <option value="1">Trái cây lớn</option>
+                <option value="2">Bưởi</option>
+            </select>
+            Số lượng:
+            <input type="number" id="sltc">
+        </div>
+        <br>
+        <div>
+            Tiền: <input type="number" id="tien">
+        </div>
+        <br>
+        <div class="btn">
+            <button type="button" onclick="functionOK()">OK</button>
+            <button type="button">Cancle</button>
+        </div>
+        <div class="result">
+            <p id="display"></p>
+            <p id="total"></p>
+            <p><span id="demo"></span></p>
+        </div>
+    </div>
+    <script>
+        function functionOK() {
+            var nu = document.getElementById("nuoc");
+            var nuoc = nu[nu.selectedIndex].value;
+            nuoc = parseInt(nuoc);
+
+            var tc = document.getElementById("tc");
+            var traicay = tc[tc.selectedIndex].value;
+            traicay = parseInt(traicay);
+
+            var tien = document.getElementById("tien").value;
+            var sln = document.getElementById("sln").value;
+            var sltc = document.getElementById("sltc").value;
+            var n;
+            var d_n;
+            var t;
+            var d_t;
+            switch (nuoc) {
+                case 0: {
+                    n = 15000;
+                    d_n = "Nước suối";
+                } break;
+                case 1: {
+                    n = 17000;
+                    d_n = "Coca cola";
+                } break;
+                case 2: {
+                    n = 17000;
+                    d_n = "7 up";
+                } break;
+                case 3: {
+                    n = 17000;
+                    d_n = "pepsi";
+                } break;
+                case 4: {
+                    n = 17000;
+                    d_n = "Cam ép";
+                } break;
+                case 5: {
+                    n = 15000;
+                    d_n = "Sting";
+                } break;
+                case 6: {
+                    n = 20000;
+                    d_n = "Bò húc";
+                } break;
+            }
+            switch (traicay) {
+                case 0: {
+                    t = 99000;
+                    d_t = "Trái cây nhỏ";
+                } break;
+                case 1: {
+                    t = 129000;
+                    d_t = "Trái cây lớn";
+                } break;
+                case 2: {
+                    t = 189000;
+                    d_t = "Bưởi";
+                } break;
+            }
+
+
+            var sum;
+            sum = (n * sln) + (t * sltc);
+            document.getElementById("total").innerHTML = "Tổng số tiền là: " + sum;
+            if (tien >= sum) {
+                if (sln == 0) {
+                    document.getElementById("display").innerHTML = "Mời bạn xơi " + d_t;
+                }
+                if (sltc == 0) {
+                    document.getElementById("display").innerHTML = "Mời bạn xơi " + d_n;
+                }
+                else {
+                    document.getElementById("display").innerHTML = "Mời bạn xơi " + d_n + "<br>" + "Mời bạn xơi " + d_t;
+                }
+                var thua;
+                thua = tien - sum;
+                if (thua > 0) {
+                    document.getElementById("demo").innerHTML = "Số tiền thừa của bạn là: " + thua + "đ";
+                }
+                else if (thua == 0) {
+                    document.getElementById("demo").innerHTML = "Số tiền thừa của bạn là vừa đủ ";
+                }
+            }
+            else {
+                document.getElementById("demo").innerHTML = "Xin lỗi bạn chưa đủ tiền";
+            }
+        }
+    </script>
+</body>
+
+</html>

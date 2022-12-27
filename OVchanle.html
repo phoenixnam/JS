@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O vuong chan le</title>
+</head>
+<body>
+    <script>
+        var d=prompt("Nhap d:");
+        var n=prompt("Nhap n: ")
+        for(var i=0; i<=d; i++){
+            for ( var j=0; j<=n; j++ ){
+                if(i%2==0){
+                    document.write("<div class='square1'> </div>");
+                }
+                else{
+                    document.write("<div class='square2'> </div>");
+                }
+            }
+            document.write("<div style='clear:both'> </div>");
+        }
+    </script>
+    <style>
+        .square1{
+            height: 45px;
+            width: 45px;
+            margin-top: 20px;
+            margin-left: 20px;
+            border: 1 solid greenyellow;
+            float: left;
+            background-color: blue;
+        }
+    .square2{
+        height: 45px;
+        width: 45px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border: 1 solid greenyellow;
+        float: left;
+        background-color: rgb(255, 187, 0);
+    }
+    </style>
+</body>
+</html>

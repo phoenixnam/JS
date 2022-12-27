@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        var d=prompt("Nhap m: ");
+        var n=prompt("Nhap n: ");
+        for( var i=0; i<d; i++){
+            for( var j=0; j<n; j++){
+            document.write("<div class='square'> </div>");
+        }
+        document.write("<div style='clear:both'> </div>");
+        }
+    </script>
+</body>
+<style>
+    .square{
+        height: 45px;
+        width: 45px;
+        margin-top: 20px;
+        margin-left: 20px;
+        border: 1 solid greenyellow;
+        float: left;
+        background-color: blue;
+    }
+</style>
+</html>

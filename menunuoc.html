@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Menu Do Uong</title>
+</head>
+<body>
+    <h1 style="font-size:20px;">Nước Ngọt Các Loại</h1>
+
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-1">
+            <div id="ns">Nước Suối</div>
+            <div id="coca">CoCa Cola</div>
+            <div id="7up">7 Up</div>
+            <div id="pes">Pessi</div>
+            <div id="ce">Cam ép</div>
+            <div id="St">Sting</div>
+            <div id="bh">Bò Húc</div>
+          </div>
+          <div class="col-sm-2">
+            <div id="mn">15 000</div>
+            <div id="mb">17 000</div>
+            <div>17 000</div>
+            <div>17 000</div>
+            <div>17 000</div>
+            <div>17 000</div>
+            <div id="hm">20 000</div>
+          </div>
+        </div>
+        <h1 style="font-size: 20px; ">Trái Cây</h1>
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="fsmal">Trái cây nhỏ
+                    <label>
+                        Quantity
+                        <input type="text" name="qty" id="qty" />
+                    </label>
+                </div>
+                <div id="fbig">Trái cây lớn
+                    <label>
+                        Quantity
+                        <input type="text" name="qty" id="qty" />
+                    </label>
+                </div>
+                <div id="buoi">Bưởi
+                    <label>
+                        Quantity
+                        <input type="text" name="qty" id="qty" />
+                    </label>
+                </div>
+            </div>
+            <div class="col-sm-2">
+                <div id="nho">99 000</div>
+                <div id="lon">129 000</div>
+                <div id="grape">189 000</div>
+            </div>
+        </div>
+        <br>
+        <br>
+      </div>
+      <button type="button"id="mua" onclick="Mua">Mua</button>
+      <button type="button"id="Cancel" onclick="Cancel">Quay Lại</button>
+      <Script>
+        var a=parseInt(document.getElementById('fsmal').value);
+        var b=parseInt(document.getElementById('fbig').value);
+        var c=parseInt(document.getElementById('buoi').value);
+         var sum;
+        function Mua(){
+            switch (value) {
+                case 1:{
+                    sum=nho*Qty;
+                    document.getElementById("tong").value=sum;
+                };
+                case 2:{
+                    sum=lon*Qty;
+                    document.getElementById("tong").value=sum;
+                };
+                case 3:{
+                    sum=grape*Qty;
+                    document.getElementById("tong").value=sum;
+                };
+  
+                default:
+                    break;
+            }
+        }
+      </Script>
+</body>
+</html>

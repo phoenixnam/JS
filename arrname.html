@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="text-align: center;">
+    <h1>Name 
+        <input type="text" id="name">
+    </h1>
+    <br>
+    <br>
+    Tên là:
+    <input type="text" name="show" id="hienthi">
+    <br>
+    <br>
+    <br>
+    <button id="ok" onclick="getName()">OK</button>
+    <script>
+        var arr=[];
+        function getName(){
+            var a=document.getElementById("name").value;
+            arr.push(a);
+            document.getElementById("hienthi").value=arr;
+        }
+    </script>
+</body>
+</html>

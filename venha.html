@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="venha.js"> </script>
+</head>
+
+<body>
+    <header id="header">
+        <marquee class="text" scrollamout="4">
+
+        </marquee>
+    </header>
+    <div class="into">
+        <form action="">
+            <label for="">Fullname Customer</label>
+            <input type="text" name="" id="fn_c" onkeypress="return isCharacterKey (event)" required>
+            <label for="">Id pro</label>
+            <input type="text" name="" id="id" onkeypress="return isNumberKey (event)" required>
+            <label for="">Name Product</label>
+            <input type="text" name="" id="n_p" required>
+            <label for="">Quantity</label>
+            <input type="text" name="" id="q_p" onkeypress="return isNumberKey (event)" required>
+            <label for="">Price</label>
+            <input type="text" name="" id="price" onkeypress="return isNumberKey (event)" required>
+        </form>
+        <input class="btn1" type="button" onclick="savedata()" name="ok" id="bt">
+        <input class="btn2" type="button" onclick="showdata()" name="show" id="show">
+        <input class="btn2" type="reset" name="reset" id="reset">
+        <br>
+        <br>
+        <br>
+        <table class="table">
+            <tr>
+                <th>Auto increment</th>
+                <th>Customer Name</th>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+    </div>
+</body>
+
+</html>

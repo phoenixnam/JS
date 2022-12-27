@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MẢNG</title>
+</head>
+<body>
+    <!-- <div id="arr" style="color: rgb(173, 12, 135); text-align: center;"></div> -->
+    <h1>trái cây</h1>
+    <p id="demo"></p>
+    <script>
+        // var mang=['a','b','c'];
+        // var mang2=['d','e','f']
+        // var mang1=mang.concat(mang2)
+        // document.getElementById('arr').innerHTML=mang1;
+        // document.write(mang1);
+        var fruit, text, flen, i;
+        fruit=['banana', 'orange', 'mango', 'grape'];
+        flen=fruit.length;
+        text="<ul>";
+            for (i=0; i<flen; i++){
+                text +="<li>"+fruit[i]+"</li>";
+            }
+        text="</ul>";  
+        document.getElementById('demo').innerHTML=text;  
+    </script>
+</body>
+</html>

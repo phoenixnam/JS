@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body style="display: block; margin: 8px;">
+    <form name="frm">
+        <p>
+            <label>First Name:
+                <input type="text" name="fname" id="fname">
+            </label>
+        </p>
+        <p>
+            <label>Last Name:
+                <input type="text" name="lname" id="lname">
+            </label>
+        </p>
+        <p>
+            <label>Score:
+                <input type="text" name="score" id="score">
+            </label>
+        </p>
+        <p>
+            <button type="button" onclick="ok()">OK </button>
+        </p>
+    </form>
+    <table id="tble">
+        <tbody>
+            <tr>
+                <th>N</th>
+                <th>Full Name</th>
+                <th>Score</th>
+
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+        var N = 0;
+        function ok() {
+            N++;
+            var fname = frm.fname.value;
+            var lastname = frm.lname.value;
+            var score = frm.score.value;
+            var row = "<tr>";
+            row += "<td>" + fname + "</td>";
+            row += "<td>" + lastname + "</td>";
+            row += "<td>" + score + "</td>";
+            row += "</tr>"
+            document.getElementById("tble").innerHTML += row;
+        }
+
+    </script>
+<style>
+    #tble{
+        padding: auto;
+        margin-right: 20%;
+        margin-right: 10%;
+    }
+    .th{
+        padding: 10px;
+        margin-left: 10px;
+
+    }
+</style>
+</body>
+
+</html>

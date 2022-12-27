@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán Hàng</title>
+</head>
+
+<body>
+    <h1>New Prodcut</h1>
+    <hr>
+    <form name="frm">
+        <p>
+            <label for="">
+                Product Name
+                <input type="text" name="pname" id="pname">
+            </label>
+            <label for="">
+                Quantity
+                <input type="text" name="qtity" id="qtity">
+            </label>
+        </p>
+        <p>
+            <label for="">
+                Unit Price
+                <input type="text" id="pri">
+            </label>
+            <label for="">
+                Discount
+                <input type="text" id="dis">
+            </label>
+        </p>
+        <p>
+        <button type="button" onclick="Sell()">Sell</button>
+        <button type="button">Cancel</button>
+    </p>
+    </form>
+    <table id="tbl">
+        <tr>
+            <th>ID</th>
+            <th>New product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Discount</th>
+            <th>Subtotal</th>
+        </tr>
+    </table>
+    <script>
+           var id=0;
+        function Sell(){
+            id++;
+            var pname=frm.pname.value;
+            var qtity=frm.qtity.value;
+            var pri=frm.pri.value;
+            var dis=frm.dis.value;
+            var sub=qtity * pri * ( 1 - dis / 100);
+            var 
+            row ="<tr>";
+            row +="<td>"+id+"</td>";
+            row +="<td>"+pname+"</td>";
+            row +="<td>"+qtity+"</td>";
+            row +="<td>$"+pri+"</td>";
+            row +="<td>"+dis+"</td>";
+            row +="<td>$"+sub+"</td>";
+            row="</tr>"
+        document.getElementById("tbl").innerHTML+=row;
+        }
+    </script>
+       <style>
+        table{
+            width: 600px;
+            border-spacing: 0;
+            border: 1px solid #ACBB;
+         
+        }
+        #tbl tr{
+              height: 27px;  
+            }
+        #tbl tr th,#tbl tr td{
+            text-align: left;
+            border-bottom: 1px solid #AC1;
+        }
+        #tbl tr:last-child td{
+            border: none;
+        }
+    </style>
+</body>
+</body>
+
+</html>

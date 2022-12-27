@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var Sinhvien={
+        //     name:"Nguyen Van A",
+        //     year:2003,
+        //     gender:"nam",
+        //     age:20
+        // }
+        // for(x in Sinhvien){
+        //     document.write(Sinhvien[x]);
+        //     document.write("<hr>")
+        // }
+        var SinhVien = [
+            {
+                name: "Nguyen Van A",
+                year: 2003,
+                gender: "nam",
+                age: 20
+            },
+            {
+                name: "Nguyen Van B",
+                year: 2000,
+                gender: "nam",
+                age: 20
+            },
+            {
+                name: "Nguyen lan Thi",
+                year: 2003,
+                gender: "nu",
+                age: 20
+            }
+        ]
+        // for(x in SinhVien){
+        //     document.write(SinhVien[x].name+"<br>"+SinhVien[x].gender+"<br>"+SinhVien[x].year+"<br>"+SinhVien[x].age+"<hr>")
+        // }
+        for(var sv=0; sv<SinhVien.length; sv++){
+            // document.write(SinhVien[sv]+"<hr>")
+            document.write(SinhVien[sv].name+"<br>"+SinhVien[sv].gender+"<br>"+SinhVien[sv].year+"<br>"+SinhVien[sv].age+"<hr>")
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Trái cây</h1>
+    <p id="demo"></p>
+   <button onclick="Push">Thêm</button>
+    <script>
+        var fruit, flen, text, i;
+        fruit=["mango","orange"];
+        flen=fruit.length;
+        text="<ul>";
+            for(i=0; i<flen; i++){
+                text+="<li>"+fruit[i]+"</li>";
+
+            }
+        text+="</ul>"
+        document.getElementById("demo").innerHTML=text;
+        function Push(){
+            text.push("grape");
+        }
+        document.getElementById("demo").innerHTML=fruit;
+    </script>
+</body>
+</html>
