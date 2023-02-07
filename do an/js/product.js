@@ -61,10 +61,11 @@ function load() {
 if (localStorage.getItem('listProduct') != null) {
 load();
 }
+
 var listLocal = function() {
 var listproduct = '';
 for (var i in products) {
-var data = JSON.parse(JSON.stringify(product[i]));
+var data = JSON.parse(JSON.stringify(products[i]));
 
 var listproduct = '<div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3">';
     listproduct += '<div class="card product p-2" styte="width:auto">';
@@ -72,12 +73,23 @@ var listproduct = '<div class="col-lg-3 col-md-6 col-sm-6 col-6 mt-3">';
     listproduct += '<div class="card-title product-title text-center h5" >' +
     data.name + '</div>';
     listproduct += '<div class="price text-center h6">' + data.price + '₫</div>';
-    listproduct += '<span class="text-center add-to-cart btn btn-outline-warning add-cart" data-id="' + data.id + " data-name=" + data.name +" data-img=" +data.img +" data-price=" +data.price + 'onclick="tks()">';
+    listproduct += '<span class="text-center add-to-cart btn btn-outline-warning add-cart" data-id="' + data.id +
+     " data-name=" + data.name +" data-img=" +data.img +" data-price=" +data.price + 'onclick="tks()">';
     listproduct += '<a>';
     listproduct += '<i class="fas fa-cart-plus"></i>';
     listproduct += '</a>';
+    listproduct += '<br>';
+    
     listproduct += '</span>';
+    listproduct += '<button class="btn btn-secondary" data-toggle="modal" data-target=#proDetail" onclicl="proDetail('+i+')"> Detail</button>'
+
+//     listproduct += '<span class="text-center add-to-cart btn btn-outline-warning add-cart" data-id="' + data.id +
+//     " data-name=" + data.name +" data-img=" +data.img +" data-price=" +data.price + 'onclick="tks()">'; 
+//    listproduct += 'detail';
+   listproduct += '</span>';
+
     listproduct += '</div>';
+   
     listproduct += '</div>';
 
 document.getElementById('banchay').innerHTML += listproduct;
@@ -88,3 +100,26 @@ Save();
 
 listLocal();
 localStorage.clear();
+function proDetail(i){
+    var pDetail ='';
+    for (var key in product){
+        if(key==i){
+            var data=product[i];
+            pDetail+='<form class="form-row">';
+            pDetail+='<div class="col-lg-12 col-md-6 col-sm-6 col-6 mt-3">';
+            pDetail+='<div class="card" style="width:auto">';
+            pDetail+='<div class="card-img-top" scr="img/'+data.img+ '">';
+            pDetail+='<div class="card-body">';
+            pDetail+='<div class="card-title">' + data.name+'</div>';
+            pDetail+='<div class="card-text">';
+            pDetail+=data.descript +'<br>';
+            pDetail+=data.price +'</div>';
+            pDetail+='<span class="text-center add-to-cart btn">';
+            pDetail+='<button class="btn btn-success">'+'<i class="fa fa-cart-plus mt-3"></i>' +'</button></span>';
+            pDetail+='</form>';
+            break;
+        }
+        }
+        document.getElementById('proDetail').innerHTML=pDetail;
+
+        }
